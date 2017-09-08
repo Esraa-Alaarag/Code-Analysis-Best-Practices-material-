@@ -1,10 +1,11 @@
 package nurseryRhymes.oldMacdonald;
-
-
+//create new class and name it song
+//Cut and paste everything in the class ‘Song’ from the Main class into this new class ‘Song’
+//To make this class visible to other packages go ahead and make the class public
 public class Song {
 	private String animalSound;
 	public static boolean hasAnimal = false;
-	
+	//Locate the songIntro() method and delete the intro() method call. 
 	public static final void songIntro () {
 		System.out.println("Old MacDonald had a farm");
 		pause();
@@ -14,7 +15,7 @@ public class Song {
 		pause();
 		System.out.println("Enter an animal to see if its on Mr. MacDonald's farm:");
 	}
-
+//extract try/catch block of code into a method called ‘pause’ and replaced the additional try/catch blocks with invocations of that method. 
 	private static void pause() {
 		try {
 			Thread.sleep(1500);
@@ -25,6 +26,9 @@ public class Song {
 	}
 	
 	public Song (String animal) {
+		//remove that while infinite loop and remove the Boolean newAnimal declaration as well. 
+
+		//replace the ‘==’ with equals(). 
 		if(animal.equals("chicken")) {
 			hasAnimal = true;
 			animalSound = Chicken.cluck();
